@@ -1,0 +1,9 @@
+idp_exchange:
+  label: IdP Exchange
+  username: Benutzername
+  time: Zeitpunkt
+  status: Aktuell befinden sich <strong>%user</strong> Benutzer in der Warteschlage.
+  clear:
+    label: Warteschlange leeren
+    confirm: Sollen wirklich alle Benutzer aus der Warteschlange gelöscht werden?
+    success: Warteschlage erfolgreich geleert

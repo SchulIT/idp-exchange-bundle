@@ -1,0 +1,40 @@
+<?php
+
+namespace SchoolIT\IdpExchangeBundle\DependencyInjection;
+
+use Symfony\Component\Config\Definition\Builder\TreeBuilder;
+use Symfony\Component\Config\Definition\ConfigurationInterface;
+
+class Configuration implements ConfigurationInterface {
+
+    public function getConfigTreeBuilder() {
+        $treeBuilder = new TreeBuilder();
+        $rootNode = $treeBuilder->root('idp_exchange');
+
+        $rootNode
+            ->children()
+                ->scalarNode('user_limit')
+                    ->defaultValue(1)
+                ->end()
+                ->scalarNode('endpoint')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('token')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('guzzle')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('user_loader')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('user_updater')
+                    ->isRequired()
+                ->end()
+                ->scalarNode('serializer')->end()
+                ->scalarNode('logger')->end()
+            ->end();
+
+        return $treeBuilder;
+    }
+}

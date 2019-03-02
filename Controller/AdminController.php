@@ -7,11 +7,11 @@ use Doctrine\ORM\Tools\Pagination\Paginator;
 use SchoolIT\CommonBundle\Form\ConfirmType;
 use SchoolIT\IdpExchangeBundle\Entity\UpdateUser;
 use SchoolIT\IdpExchangeBundle\Service\SynchronizationManager;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AdminController extends Controller {
+class AdminController extends AbstractController {
 
     const ITEMS_PER_PAGE = 25;
 

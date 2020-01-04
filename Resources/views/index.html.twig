@@ -8,31 +8,29 @@
         <p>{{ 'idp_exchange.status'|trans({'%users%': count})|raw }}</p>
     </div>
 
-    <div class="contentbox">
-        <div class="table-responsive">
-            <table class="table table-bordered table-hover table-striped">
-                <colgroup>
-                    <col />
-                    <col class="col-md" />
-                </colgroup>
+    <div class="card">
+        <table class="table table-bordered table-hover table-striped">
+            <colgroup>
+                <col />
+                <col class="col-md" />
+            </colgroup>
 
-                <thead>
+            <thead>
+            <tr>
+                <th>{{ 'idp_exchange.username'|trans }}</th>
+                <th>{{ 'idp_exchange.time'|trans }}</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for user in users %}
                 <tr>
-                    <th>{{ 'idp_exchange.username'|trans }}</th>
-                    <th>{{ 'idp_exchange.time'|trans }}</th>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.dateTime|format_date }}</td>
                 </tr>
-                </thead>
-
-                <tbody>
-                {% for user in users %}
-                    <tr>
-                        <td>{{ user.username }}</td>
-                        <td>{{ user.dateTime|format_date }}</td>
-                    </tr>
-                {% endfor %}
-                </tbody>
-            </table>
-        </div>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 
     {% include '@Common/includes/pagination.html.twig' with {

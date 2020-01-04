@@ -2,6 +2,8 @@
 
 namespace SchoolIT\IdpExchangeBundle\DependencyInjection;
 
+use SchoolIT\IdpExchange\Client;
+use SchoolIT\IdpExchangeBundle\Service\SynchronizationManager;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -19,7 +21,7 @@ class IdpExchangeExtension extends Extension {
 
         $container->setParameter('idp_exchange.user_limit', $config['user_limit']);
 
-        $definition = $container->getDefinition('idp_exchange.client');
+        $definition = $container->getDefinition(Client::class);
         $definition->replaceArgument(0, $config['endpoint']);
         $definition->replaceArgument(1, $config['token']);
         $definition->replaceArgument(2, new Reference($config['guzzle']));
@@ -32,7 +34,7 @@ class IdpExchangeExtension extends Extension {
             $definition->replaceArgument(4, new Reference($config['logger']));
         }
 
-        $definition = $container->getDefinition('idp_exchange.sync_manager');
+        $definition = $container->getDefinition(SynchronizationManager::class);
         $definition->replaceArgument(4, new Reference($config['user_loader']));
         $definition->replaceArgument(5, new Reference($config['user_updater']));
 

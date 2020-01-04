@@ -17,39 +17,30 @@ services:
     autoconfigure: true
 
   SchoolIT\IdpExchange\Client:
-    alias: idp_exchange.client
-
-  idp_exchange.client:
-    class: SchoolIT\IdpExchange\Client
     arguments:
       - '' # Endpoint
       - '' # Token
       - '' # Guzzle
-      - '@jms_serializer' # JMS Serializer
+      - '@JMS\Serializer\SerializerInterface' # JMS Serializer
       - '@logger' # Logger
 
-  idp_exchange.key_value.store:
-    class: Webmozart\KeyValueStore\DbalStore
+  Webmozart\KeyValueStore\DbalStore:
     arguments:
       - "@doctrine.dbal.default_connection"
       - "%idp_exchange.key_value.table_name%"
 
   SchoolIT\IdpExchangeBundle\Service\SynchronizationManager:
-    alias: idp_exchange.sync_manager
-
-  idp_exchange.sync_manager:
-    class: SchoolIT\IdpExchangeBundle\Service\SynchronizationManager
+    class:
     arguments:
       - "%idp_exchange.user_limit%"
       - "@idp_exchange.client"
-      - "@SchoolIT\\IdpExchangeBundle\\Repository\\UpdateUserRepositoryInterface"
-      - "@idp_exchange.key_value.store"
+      - "@SchoolIT\IdpExchangeBundle\Repository\UpdateUserRepositoryInterface"
+      - "@Webmozart\KeyValueStore\DbalStore"
       - ""
       - ""
       - "@logger"
 
   SchoolIT\IdpExchangeBundle\Controller\AdminController:
-    public: true
     arguments:
-      - "@idp_exchange.sync_manager"
+      - "@SchoolIT\IdpExchangeBundle\Service\SynchronizationManager"
 

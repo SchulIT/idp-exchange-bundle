@@ -32,7 +32,7 @@ class RunCommand extends Command {
             $result = $this->manager->updateNextUserInQueue();
             $io->success(sprintf('Updated %d user', $result === true ? 1 : 0));
         } catch (SyncException $e) {
-            $this->getApplication()->renderException($e->getPrevious(), $output);
+            $this->getApplication()->renderThrowable($e->getPrevious(), $output);
         }
     }
 }

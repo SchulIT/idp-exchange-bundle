@@ -32,7 +32,7 @@ class EnqueueCommand extends Command {
 
             $io->success(sprintf('Successfully updated %d user(s)', $count));
         } catch (SyncException $e) {
-            $this->getApplication()->renderException($e->getPrevious(), $output);
+            $this->getApplication()->renderThrowable($e->getPrevious(), $output);
         }
 
     }

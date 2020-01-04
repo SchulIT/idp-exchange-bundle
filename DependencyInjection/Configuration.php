@@ -8,8 +8,8 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 class Configuration implements ConfigurationInterface {
 
     public function getConfigTreeBuilder() {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('idp_exchange');
+        $treeBuilder = new TreeBuilder('idp_exchange');
+        $rootNode = $treeBuilder->getRootNode();
 
         $rootNode
             ->children()

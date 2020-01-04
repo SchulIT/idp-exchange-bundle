@@ -1,17 +1,17 @@
 {
   "name": "schoolit/idp-exchange-bundle",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "symfony-bundle",
   "license": "MIT",
   "require": {
-    "php": "^7.1.3",
+    "php": "^7.3",
     "ext-iconv": "*",
-    "symfony/framework-bundle": "^4.0",
-    "symfony/yaml": "^4.0",
+    "symfony/framework-bundle": "^4.4",
+    "symfony/yaml": "^4.4",
     "schoolit/idp-exchange": "^1.0",
     "webmozart/key-value-store": "^1.0",
     "doctrine/orm": "^2.6",
-    "symfony/console": "^4.0",
+    "symfony/console": "^4.4",
     "schoolit/common-bundle": "^1.0",
     "eightpoints/guzzle-bundle": "^7.0"
   },

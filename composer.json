@@ -1,6 +1,6 @@
 {
   "name": "schoolit/idp-exchange-bundle",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "symfony-bundle",
   "license": "MIT",
   "require": {

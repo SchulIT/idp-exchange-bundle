@@ -20,6 +20,8 @@ class IdpExchangeExtension extends Extension {
         $config = $this->processConfiguration($configuration, $configs);
 
         $container->setParameter('idp_exchange.user_limit', $config['user_limit']);
+        $container->setParameter('idp_exchange.templates.overview', $config['templates']['overview']);
+        $container->setParameter('idp_exchange.templates.clear', $config['templates']['clear']);
 
         $definition = $container->getDefinition(Client::class);
         $definition->replaceArgument(0, $config['endpoint']);
@@ -41,6 +43,8 @@ class IdpExchangeExtension extends Extension {
         if(isset($config['logger'])) {
             $definition->replaceArgument(6, new Reference($config['logger']));
         }
+
+        $loader->load('controller.yaml');
     }
 
     public function getAlias() {

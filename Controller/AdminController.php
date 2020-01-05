@@ -22,7 +22,7 @@ class AdminController extends AbstractController {
     }
 
     /**
-     * @Route("/admin/exchange", name="idp_exchange_admin")
+     * @Route("", name="idp_exchange_admin")
      */
     public function index(Request $request) {
         $page = $request->query->get('page', 1);
@@ -50,7 +50,7 @@ class AdminController extends AbstractController {
 
         $lastSync = $this->manager->getLastSync();
 
-        return $this->render('@IdpExchange/index.html.twig', [
+        return $this->render($this->getParameter('idp_exchange.templates.overview'), [
             'lastSync' => $lastSync,
             'pages' => $pages,
             'page' => $page,
@@ -60,7 +60,7 @@ class AdminController extends AbstractController {
     }
 
     /**
-     * @Route("/admin/exchange/clear", name="idp_exchange_clear_admin")
+     * @Route("/clear", name="idp_exchange_clear_admin")
      */
     public function clear(Request $request) {
         $form = $this->createForm(ConfirmType::class, null, [
@@ -76,7 +76,7 @@ class AdminController extends AbstractController {
             return $this->redirectToRoute('idp_exchange_admin');
         }
 
-        return $this->render('@IdpExchange/clear.html.twig', [
+        return $this->render($this->getParameter('idp_exchange.templates.clear'), [
             'form' => $form->createView()
         ]);
     }

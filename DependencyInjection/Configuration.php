@@ -33,6 +33,13 @@ class Configuration implements ConfigurationInterface {
                 ->end()
                 ->scalarNode('serializer')->end()
                 ->scalarNode('logger')->end()
+                ->arrayNode('templates')
+                    ->addDefaultsIfNotSet()
+                    ->children()
+                        ->scalarNode('overview')->defaultValue('@IdpExchange/index.html.twig')->end()
+                        ->scalarNode('clear')->defaultValue('@IdpExchange/clear.html.twig')->end()
+                    ->end()
+                ->end()
             ->end();
 
         return $treeBuilder;

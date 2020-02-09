@@ -19,5 +19,15 @@
     "psr-4": {
       "SchoolIT\\IdpExchangeBundle\\": ""
     }
-  }
+  },
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/schulit/idp-exchange"
+    },
+    {
+        "type": "vcs",
+        "url": "https://github.com/schulit/common-bundle"
+    }
+  ]
 }

@@ -50,7 +50,7 @@ class AdminController extends AbstractController {
 
         $lastSync = $this->manager->getLastSync();
 
-        return $this->render($this->getParameter('idp_exchange.templates.overview'), [
+        return $this->render('@IdpExchange/index.html.twig', [
             'lastSync' => $lastSync,
             'pages' => $pages,
             'page' => $page,
@@ -76,7 +76,7 @@ class AdminController extends AbstractController {
             return $this->redirectToRoute('idp_exchange_admin');
         }
 
-        return $this->render($this->getParameter('idp_exchange.templates.clear'), [
+        return $this->render('@IdpExchange/clear.html.twig', [
             'form' => $form->createView()
         ]);
     }

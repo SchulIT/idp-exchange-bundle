@@ -20,10 +20,16 @@
       "SchoolIT\\IdpExchangeBundle\\": ""
     }
   },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "repositories": [
     {
-        "type": "vcs",
-        "url": "https://github.com/schulit/idp-exchange"
+      "type": "vcs",
+      "url": "https://github.com/schulit/idp-exchange"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/schulit/idp-exchange-models"
     },
     {
         "type": "vcs",

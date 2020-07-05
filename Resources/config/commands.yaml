@@ -9,8 +9,8 @@ services:
 
   SchulIT\IdpExchangeBundle\Command\RunCommand:
     tags:
-      - shapecode_cron.cron_job
+      - { name: shapecode_cron.cron_job, expression: '*\/5 * * * *' }
 
   SchulIT\IdpExchangeBundle\Command\EnqueueCommand:
     tags:
-      - shapecode_cron.cron_job
+      - { name: shapecode_cron.cron_job, expression: '* *\/2 * * *' }

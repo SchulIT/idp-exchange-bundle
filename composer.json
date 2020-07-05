@@ -8,11 +8,11 @@
     "ext-iconv": "*",
     "symfony/framework-bundle": "^4.4|^5.0",
     "symfony/yaml": "^4.4|^5.0",
-    "schoolit/idp-exchange": "dev-master",
+    "schulit/idp-exchange": "dev-master",
     "webmozart/key-value-store": "^1.0",
     "doctrine/orm": "^2.6",
     "symfony/console": "^4.4|^5.0",
-    "schoolit/common-bundle": "dev-master",
+    "schulit/common-bundle": "dev-master",
     "eightpoints/guzzle-bundle": "^7.0"
   },
   "autoload": {

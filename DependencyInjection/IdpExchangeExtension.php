@@ -1,9 +1,9 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\DependencyInjection;
+namespace SchulIT\IdpExchangeBundle\DependencyInjection;
 
-use SchoolIT\IdpExchange\Client;
-use SchoolIT\IdpExchangeBundle\Service\SynchronizationManager;
+use SchulIT\IdpExchange\Client;
+use SchulIT\IdpExchangeBundle\Service\SynchronizationManager;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -45,6 +45,7 @@ class IdpExchangeExtension extends Extension {
         }
 
         $loader->load('controller.yaml');
+        $loader->load('commands.yaml');
     }
 
     public function getAlias() {

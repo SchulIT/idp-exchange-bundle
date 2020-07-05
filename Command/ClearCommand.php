@@ -1,8 +1,8 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Command;
+namespace SchulIT\IdpExchangeBundle\Command;
 
-use SchoolIT\IdpExchangeBundle\Service\SynchronizationManager;
+use SchulIT\IdpExchangeBundle\Service\SynchronizationManager;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;

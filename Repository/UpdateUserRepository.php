@@ -1,10 +1,10 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Repository;
+namespace SchulIT\IdpExchangeBundle\Repository;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\ORM\EntityRepository;
-use SchoolIT\IdpExchangeBundle\Entity\UpdateUser;
+use SchulIT\IdpExchangeBundle\Entity\UpdateUser;
 
 class UpdateUserRepository implements UpdateUserRepositoryInterface {
 

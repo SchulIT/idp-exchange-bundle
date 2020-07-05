@@ -4,7 +4,7 @@ services:
     autoconfigure: true
     public: false
 
-  SchoolIT\IdpExchangeBundle\Controller\:
+  SchulIT\IdpExchangeBundle\Controller\:
     resource: '../../Controller'
     tags:
       - 'controller.service_arguments'

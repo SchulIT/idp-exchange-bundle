@@ -1,8 +1,8 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle;
+namespace SchulIT\IdpExchangeBundle;
 
-use SchoolIT\IdpExchangeBundle\DependencyInjection\IdpExchangeExtension;
+use SchulIT\IdpExchangeBundle\DependencyInjection\IdpExchangeExtension;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class IdpExchangeBundle extends Bundle {

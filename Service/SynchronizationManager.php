@@ -1,13 +1,13 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Service;
+namespace SchulIT\IdpExchangeBundle\Service;
 
 use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
-use SchoolIT\IdpExchange\Client;
-use SchoolIT\IdpExchange\ClientException;
-use SchoolIT\IdpExchangeBundle\Entity\UpdateUser;
-use SchoolIT\IdpExchangeBundle\Repository\UpdateUserRepositoryInterface;
+use SchulIT\IdpExchange\Client;
+use SchulIT\IdpExchange\ClientException;
+use SchulIT\IdpExchangeBundle\Entity\UpdateUser;
+use SchulIT\IdpExchangeBundle\Repository\UpdateUserRepositoryInterface;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Webmozart\KeyValueStore\Api\KeyValueStore;

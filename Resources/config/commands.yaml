@@ -1,0 +1,16 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+
+  SchulIT\IdpExchangeBundle\Command\:
+    resource: '../../Command'
+    tags: [ 'console.command' ]
+
+  SchulIT\IdpExchangeBundle\Command\RunCommand:
+    tags:
+      - shapecode_cron.cron_job
+
+  SchulIT\IdpExchangeBundle\Command\EnqueueCommand:
+    tags:
+      - shapecode_cron.cron_job

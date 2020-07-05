@@ -1,8 +1,8 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Service;
+namespace SchulIT\IdpExchangeBundle\Service;
 
-use SchoolIT\IdpExchange\Response\UserResponse;
+use SchulIT\IdpExchange\Response\UserResponse;
 
 interface UserUpdaterInterface {
     public function startTransaction();

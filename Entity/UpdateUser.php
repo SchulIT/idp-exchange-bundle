@@ -1,6 +1,6 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Entity;
+namespace SchulIT\IdpExchangeBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 

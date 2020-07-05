@@ -1,8 +1,8 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Repository;
+namespace SchulIT\IdpExchangeBundle\Repository;
 
-use SchoolIT\IdpExchangeBundle\Entity\UpdateUser;
+use SchulIT\IdpExchangeBundle\Entity\UpdateUser;
 
 interface UpdateUserRepositoryInterface {
     public function findOneByUsername(string $username): ?UpdateUser;

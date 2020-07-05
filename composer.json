@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SchoolIT\\IdpExchangeBundle\\": ""
+      "SchulIT\\IdpExchangeBundle\\": ""
     }
   },
   "minimum-stability": "dev",

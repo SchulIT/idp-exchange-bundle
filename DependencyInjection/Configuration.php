@@ -1,6 +1,6 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\DependencyInjection;
+namespace SchulIT\IdpExchangeBundle\DependencyInjection;
 
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;

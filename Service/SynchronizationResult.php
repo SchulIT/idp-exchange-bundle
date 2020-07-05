@@ -1,6 +1,6 @@
 <?php
 
-namespace SchoolIT\IdpExchangeBundle\Service;
+namespace SchulIT\IdpExchangeBundle\Service;
 
 class SynchronizationResult {
 

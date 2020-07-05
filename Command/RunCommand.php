@@ -33,6 +33,9 @@ class RunCommand extends Command {
             $io->success(sprintf('Updated %d user', $result === true ? 1 : 0));
         } catch (SyncException $e) {
             $this->getApplication()->renderThrowable($e->getPrevious(), $output);
+            return 1;
         }
+
+        return 0;
     }
 }

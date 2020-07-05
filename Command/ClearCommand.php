@@ -28,11 +28,13 @@ class ClearCommand extends Command {
         $io = new SymfonyStyle($input, $output);
 
         if(!$io->confirm('Do you really want to clear the user update queue?')) {
-            return;
+            return 0;
         }
 
         $this->manager->reset();
 
         $io->success('Queue cleared');
+
+        return 0;
     }
 }

@@ -33,5 +33,7 @@ class StatusCommand extends Command {
             sprintf('Currently enqueued users: %d', $this->manager->countEnqueuedUsers()),
             sprintf('Current user offset: %d', $this->manager->getCurrentOffset()),
         ]);
+
+        return 0;
     }
 }

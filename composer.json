@@ -8,32 +8,16 @@
     "ext-iconv": "*",
     "symfony/framework-bundle": "^4.4|^5.0",
     "symfony/yaml": "^4.4|^5.0",
-    "schulit/idp-exchange": "dev-master",
+    "schulit/idp-exchange": "^1.0",
     "webmozart/key-value-store": "^1.0",
     "doctrine/orm": "^2.6",
     "symfony/console": "^4.4|^5.0",
-    "schulit/common-bundle": "dev-master",
+    "schulit/common-bundle": "^1.0",
     "eightpoints/guzzle-bundle": "^7.0"
   },
   "autoload": {
     "psr-4": {
       "SchulIT\\IdpExchangeBundle\\": ""
     }
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/schulit/idp-exchange"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/schulit/idp-exchange-models"
-    },
-    {
-        "type": "vcs",
-        "url": "https://github.com/schulit/common-bundle"
-    }
-  ]
+  }
 }
